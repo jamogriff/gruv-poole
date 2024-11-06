@@ -36,7 +36,11 @@
   display: block;
   margin-top: -.5rem;
   margin-bottom: var(--spacer);
-  color: var(--gray-600);
+  color: var(--gray-700);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--gruv-light-700);
+  }
 }
 
 
@@ -58,10 +62,12 @@
   }
 
   a {
-    text-decoration: none;
-
     small {
-      color: var(--gray-600);
+      color: var(--gray-700);
+
+      @media (prefers-color-scheme: dark) {
+        color: var(--gruv-light-700);
+      }
     }
   }
 }
