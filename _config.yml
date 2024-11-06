@@ -21,6 +21,7 @@ exclude:
   - Gemfile.lock
   - LICENSE.md
   - README.md
+  - scripts/
 
 sass:
   sass_dir: _sass
