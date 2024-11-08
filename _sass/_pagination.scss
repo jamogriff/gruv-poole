@@ -6,7 +6,7 @@
 .pagination {
   display: flex;
   margin: 0 -1.5rem var(--spacer);
-  color: var(--gray-500);
+  color: var(--gray);
   text-align: center;
 }
 
@@ -25,6 +25,7 @@
 
 // Only provide a hover state for linked pagination items
 a.pagination-item:hover {
+  color: var(--button-hover-color);
   background-color: var(--border-color);
 }
 

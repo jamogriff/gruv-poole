@@ -56,20 +56,20 @@ hr {
 abbr {
   font-size: 85%;
   font-weight: bold;
-  color: var(--gray-600);
+  color: var(--quote-color);
   text-transform: uppercase;
 
   &[title] {
     cursor: help;
-    border-bottom: 1px dotted var(--border-color);
+    border-bottom: 1px dotted var(--link-border-color);
   }
 }
 
 blockquote {
   padding: .5rem 1rem;
   margin: .8rem 0;
-  color: var(--gray-500);
-  border-left: .25rem solid var(--border-color);
+  color: var(--quote-color);
+  border-left: .25rem solid var(--quote-accent);
 
   p:last-child {
     margin-bottom: 0;
