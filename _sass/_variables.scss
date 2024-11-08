@@ -29,10 +29,10 @@
   --yellow-100: #fff3bf;
 
   --green-accent: #65ff80;
-  --gruv-dark-000: #665c54;
   --gruv-dark-100: #504945;
   --gruv-dark-300: #3c3836;
   --gruv-dark-500: #282828;
+  --gruv-light-100: #f9f3d9;
   --gruv-light-300: #fbf1c7;
   --gruv-light-500: #ebdbb2;
   --gruv-light-700: #d5c4a1;
@@ -40,7 +40,8 @@
   --gruv-blue-500: #458588;
   --gruv-blue-700: #076678;
 
-  --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  //--body-font: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --body-font: "Jost", serif;
   --body-font-size: 16px;
   --body-line-height: 1.5;
   --body-color: var(--gruv-dark-500);
@@ -51,12 +52,13 @@
 
   --heading-color: var(--gruv-dark-500);
 
-  --border-color: var(--gray-300);
+  --border-color: var(--gray-700);
   --border-radius: .25rem;
 
-  --code-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  //--code-font: "OfficeCodePro", "Courier New", "Courier", monospace;
+  --code-font: "OfficeCodePro", sans-serif;
   --code-color: var(--indigo);
-  --code-bg: var(--gruv-light-500);
+  --code-bg: var(--gruv-light-100);
 
   --spacer: 1rem;
   --spacer-2: calc(var(--spacer) * 1.5);
@@ -137,11 +139,11 @@
     --heading-color: var(--gruv-light-300);
 
     --link-color: var(--gruv-light-300);
-    --link-border-color: var(--gruv-dark-000);
+    --link-border-color: var(--gruv-dark-100);
 
-    --border-color: rgba(255,255,255,.15);
+    --border-color: var(--gruv-light-700);
 
-    --code-color: var(--grape);
+    --code-color: var(--red);
     --code-bg: var(--black);
   }
 }
