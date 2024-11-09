@@ -1,66 +1,28 @@
-// Monospace
+// Body typeface
+@font-face {
+  font-family: "Jost";
+  src: url("assets/fonts/body/Jost.woff2") format("woff2");
+}
+
+// Code typeface
 // There's no bold and italic font. Just don't do it.
 @font-face {
   font-family: "OfficeCodePro";
-  src:
-    url("assets/fonts/mono/OfficeCodePro-Regular.woff2") format("woff2");
+  src: url("assets/fonts/code/OfficeCodePro-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "OfficeCodePro";
-  src:
-    url("assets/fonts/mono/OfficeCodePro-RegularItalic.woff2") format("woff2");
+  src: url("assets/fonts/code/OfficeCodePro-RegularItalic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "OfficeCodePro";
-  src:
-    url("assets/fonts/mono/OfficeCodePro-Bold.woff2") format("woff2");
+  src: url("assets/fonts/code/OfficeCodePro-Bold.woff2") format("woff2");
   font-weight: bold;
-  font-style: normal;
-}
-
-// Sans
-@font-face {
-  font-family: "Jost";
-  src:
-    url("assets/fonts/serif/Jost-200-Thin.woff2") format("woff2");
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Jost";
-  src:
-    url("assets/fonts/serif/Jost-400-Book.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Jost";
-  src:
-    url("assets/fonts/serif/Jost-500-Medium.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Jost";
-  src:
-    url("assets/fonts/serif/Jost-700-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Jost";
-  src:
-    url("assets/fonts/serif/Jost-900-Black.woff2") format("woff2");
-  font-weight: 900;
   font-style: normal;
 }

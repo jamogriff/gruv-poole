@@ -40,13 +40,11 @@
   --orange-dark: #af3a03;
 
   /* Misc global variables */
-  //--body-font: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --body-font: "Jost", serif;
+  --body-font: "Jost", "Arial", sans-serif;
   --body-font-size: 16px;
   --body-line-height: 1.5;
+  --code-font: "OfficeCodePro", "Courier New", "Courier", monospace;
   --border-radius: .25rem;
-  //--code-font: "OfficeCodePro", "Courier New", "Courier", monospace;
-  --code-font: "OfficeCodePro", sans-serif;
   --spacer: 1rem;
   --spacer-2: calc(var(--spacer) * 1.5);
   --spacer-3: calc(var(--spacer) * 3);
