@@ -6,13 +6,8 @@ Gruv Poole is a fork of the [Poole theme](https://github.com/poole/poole) for [J
 
 Gruv Poole rebuilt Poole's color scheme to implement [Gruvbox's](https://github.com/morhetz/gruvbox) color palette and adds dedicated typefaces.
 
-![Gruv Poole dark mode](demo-assets/dark.png "Gruv Poole dark mode")
-![Gruv Poole light mode](demo-assets/light.png "Gruv Poole light mode")
-
-## Contents
-
-- [Usage](#usage)
-- [Licenses](#licenses)
+<img src="demo-assets/dark.png" alt="Gruv Poole dark mode" width="430">
+<img src="demo-assets/light.png" alt="Gruv Poole light mode" width="430">
 
 
 ## Usage
