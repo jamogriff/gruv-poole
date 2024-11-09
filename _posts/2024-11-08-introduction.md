@@ -3,21 +3,13 @@ layout: post
 title: Introduction
 ---
 
-*The Strange Case of Dr. Jekyll and Mr. Hyde* tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel's supporting cast is a man by the name of Mr. Poole, Dr. Jekyll's loyal butler...
+Gruv Poole is a fork of the [Poole theme](https://github.com/poole/poole) for [Jekyll](http://jekyllrb.com), the static site generator. Gruv Poole provides a facelift to the original theme but its philosophy remains the same:
+> [Poole] provide[s] a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.
+<cite>[- @mdo](https://markdotto.com/)</cite>
 
-... Gruv Poole, on the other hand, is Poole's artisan brother who moved to Hawaii and embodies the shaka life &#129305;
-{: .lead}
-
------
-
-Gruv Poole is a fork of the [Poole theme](https://github.com/poole/poole) for [Jekyll](http://jekyllrb.com), the static site generator. Gruv Poole's philosophy remains unchanged from [@mdo's](https://markdotto.com/) original theme:
-> Provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.
-
-Gruv Poole rebuilt Poole's color scheme to implement [Gruvbox's](https://github.com/morhetz/gruvbox) color palette.
+Gruv Poole rebuilt Poole's color scheme to implement [Gruvbox's](https://github.com/morhetz/gruvbox) color palette and adds dedicated typefaces.
 
 This demo site was last updated {{ site.time | date: "%B %d, %Y" }}.
-
-
 
 ## What's included
 
@@ -32,12 +24,8 @@ Gruv Poole is a streamlined Jekyll site designed and built as a foundation for b
 
 [Check out]({% post_url 2024-11-06-example-content %}) what example content looks like in the theme and learn what [features]({% post_url 2024-11-07-features %}) are available.
 
-## Browser support
-
-Poole and its themes are by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), Firefox, and Edge.
-
 ## Download
 
-These themes are developed on and hosted with GitHub. Head to the [GitHub repository]({{ site.github.repo }}) for downloads, bug reports, and features requests.
+This theme is [available as a gem](https://rubygems.org/gems/jekyll-theme-gruv-poole) or can be downloaded via its [GitHub repository](https://github.com/jamogriff/gruv-poole).
 
 Thanks!
