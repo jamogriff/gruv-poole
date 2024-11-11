@@ -1,7 +1,7 @@
 // Code
 //
 // Inline and block-level code snippets. Includes tweaks to syntax highlighted
-// snippets from Pygments/Rouge and Gist embeds.
+// snippets from Pygments/Rouge
 
 code,
 pre {
@@ -52,9 +52,4 @@ pre {
     user-select: none;
     opacity: .25;
   }
-}
-
-// Gist via GitHub Pages
-.gist .markdown-body {
-  padding: 15px !important;
 }
