@@ -58,9 +58,7 @@ Google Analytics will only appear in production (i.e. adding `JEKYLL_ENV=product
 
 ### Plugins
 
-Gruv Poole removed GitHub gist embedding functionality that was present in the original Poole theme. Otherwise, the following plugins are still present:
-- [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag#usage) (ensures your website gets the most useful meta tags)
-- jekyll-paginate (adds post pagination) ** TODO Deprecate and remove**
+Gruv Poole trimmed the plugin fat of the original Poole theme. It only comes packaged with [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag#usage), which ensures your website gets the most useful meta tags.
 
 ## Licenses
 

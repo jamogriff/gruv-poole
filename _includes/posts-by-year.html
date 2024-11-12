@@ -1,0 +1,11 @@
+{% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in postsByYear %}
+  <h2>{{ year.name }}</h2>
+  {% for post in year.items %}
+  <div class="archive-item d-md-flex">
+    <a href="{{ post.url | relative_url }}" class="flex-none">{{ post.title }}</a>
+    <div class="spacer d-none d-md-block"></div>
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="archive-date flex-none">{{ post.date | date_to_string }}</time>
+  </div>
+  {% endfor %}
+{% endfor %}

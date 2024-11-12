@@ -1,13 +1,11 @@
 # Setup
 title: Gruv Poole
 tagline: Aesthetic Excellence
-paginate: 1
 baseurl: ""
 permalink: pretty
 
 # Gems
 plugins:
-  - jekyll-paginate
   - jekyll-seo-tag
 
 # Optimize Jekyll
@@ -22,7 +20,8 @@ exclude:
 
 sass:
   sass_dir: _sass
-  style: :compressed
+  sourcemap: development
+  style: compressed
 
 # Specify the author for blog posts
 author:
