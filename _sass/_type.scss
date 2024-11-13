@@ -6,12 +6,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: 600;
   line-height: 1.1;
-  color: var(--heading-color);
+  color: var(--contrast-high);
   letter-spacing: -.025rem;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 h2 {
@@ -51,7 +51,7 @@ hr {
   position: relative;
   margin: var(--spacer-2) 0;
   border: 0;
-  border-top: 1px solid var(--muted-color);
+  border-top: 1px solid var(--muted);
 }
 
 abbr {
@@ -62,7 +62,7 @@ abbr {
 
   &[title] {
     cursor: help;
-    border-bottom: 1px dotted var(--link-border-color);
+    border-bottom: 1px dotted var(--contrast-low);
   }
 }
 
