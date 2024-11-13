@@ -102,8 +102,12 @@
 // on elements of a post
 @media (min-width: variables.$breakpoint-md) {
   .post {
-    p, ul, ol, blockquote, .related-posts, .highlighter-rouge {
+    p, ul, ol, blockquote,.highlighter-rouge {
       max-width: variables.$max-content-width;
     } 
+  }
+
+  .related-posts {
+    max-width: variables.$max-content-width;
   }
 }
