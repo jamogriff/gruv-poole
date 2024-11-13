@@ -1,3 +1,6 @@
+@use "variables";
+@use "mixins" as *;
+
 // Posts and pages
 //
 // Each post is wrapped in `.post` and is used on base and post layouts. Each
@@ -36,15 +39,71 @@
   color: var(--gray);
 }
 
+// A stylized reference link to a post
+// Think of related posts and archive links
+.post-ref {
+  margin-bottom: var(--spacer);
+  overflow: auto;
 
-// Related posts
-.related {
+  a {
+    flex: none;
+  }
+
+  // Not shown on mobile
+  // Apply with a responsive display class
+  // to display at certain breakpoints
+  span {
+    display: none;
+    width: 100%;
+    height: 1.5rem;
+    margin-inline:.75rem;
+    border-bottom: 1px dotted var(--contrast-low);
+    @include show-block-on-medium;
+  }
+
+  time {
+    display: block;
+    flex: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--gray);
+  }
+
+  @media (min-width: variables.$breakpoint-md) {
+    margin-bottom: .5rem;
+  }
+
+  @include show-flex-on-medium;
+}
+
+// Category above multiple post refs e.g. year
+.post-ref-category {
+    margin-top: 0;
+    margin-bottom: var(--spacer);
+    font-size: 2rem;
+}
+
+.post-ref+.post-ref-category {
+  margin-top: 2rem;
+}
+
+.related-post-wrapper {
   padding-top: var(--spacer-2);
   margin-bottom: var(--spacer-2);
   border-top: 1px solid var(--muted);
 
   h2 {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacer);
+  }
+}
+
+// Enforce content width
+// on elements of a post
+@media (min-width: variables.$breakpoint-md) {
+  .post {
+    p, ul, ol, blockquote, .related-posts, .highlighter-rouge {
+      max-width: variables.$max-content-width;
+    } 
   }
 }

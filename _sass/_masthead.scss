@@ -1,6 +1,7 @@
+@use "variables";
 // Masthead
 //
-// Super small header above the content for site name and short description.
+// Super small header above the content for site name and nav items
 
 .masthead {
   display: flex; 
@@ -11,15 +12,14 @@
   margin-bottom: var(--spacer-3);
   border-bottom: 0.125rem solid var(--muted);
 
-  @media (min-width: 34em) {
-    padding-top: 1rem;
+  @media (min-width: variables.$breakpoint-md) {
+    padding-top: var(--spacer);
   }
-  //padding-top: var(--spacer);
 }
 
 .masthead-title {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacer);
   font-size: 1.5rem;
 
   a {

@@ -2,6 +2,9 @@
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
+$max-width: 62rem;
+$max-content-width: 42rem;
+$max-quote-width: 30em;
 
 :root {
   /* Base shades from light to dark */ 
@@ -63,7 +66,7 @@ $breakpoint-lg: 992px;
   --none-more-background: var(--light-0);
 
   --text-highlight-bg: var(--purple-light);
-  --message-bg: var(--purple-light);
+  --alert: var(--purple-light);
   --quote-color: var(--blue-dark);
   --quote-accent: var(--blue);
   --code-color: var(--red-dark);
@@ -81,7 +84,7 @@ $breakpoint-lg: 992px;
     --none-more-background: var(--dark-5);
 
     --text-highlight-bg: var(--yellow);
-    --message-bg: var(--yellow);
+    --alert: var(--yellow);
     --quote-color: var(--blue-light);
     --quote-accent: var(--blue);
     --code-color: var(--red-light);

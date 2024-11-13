@@ -1,0 +1,30 @@
+// Components
+// 
+// Misc components around the site
+
+// Show alert messages to users. You may add it to single elements like a `<p>`,
+// or to a parent if there are multiple elements to show.
+.alert {
+  padding: var(--spacer);
+  margin-top: var(--spacer);
+  margin-bottom: var(--spacer);
+  color: var(--dark-5);
+  background-color: var(--alert);
+  border-radius: var(--border-radius);
+}
+
+// Table of Contents
+#markdown-toc {
+  padding: var(--spacer-2) var(--spacer-3);
+  margin-bottom: var(--spacer-2);
+  border: solid var(--contrast-med-low);
+  border-width: 1px 0;
+
+  &::before {
+    display: block;
+    margin-left: calc(var(--spacer-3) * -1);
+    content: "Contents";
+    font-size: 85%;
+    font-weight: 500;
+  }
+}

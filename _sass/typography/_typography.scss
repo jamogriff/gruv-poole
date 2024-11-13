@@ -1,3 +1,4 @@
+@use "variables";
 // Typography
 //
 // Headings, body text, lists, and other misc typographic elements.
@@ -20,12 +21,12 @@ h2 {
 }
 
 h3 {
-  margin-top: 1.5rem;
+  margin-top: var(--spacer-2);
   font-size: 1.25rem;
 }
 
 h4, h5, h6 {
-  margin-top: 1rem;
+  margin-top: var(--spacer-1);
   font-size: 1rem;
 }
 
@@ -67,7 +68,7 @@ abbr {
 }
 
 blockquote {
-  padding: .5rem 1rem;
+  padding: .5rem var(--spacer);
   margin: .8rem 0;
   color: var(--quote-color);
   border-left: .25rem solid var(--quote-accent);
@@ -76,9 +77,8 @@ blockquote {
     margin-bottom: 0;
   }
 
-  @media (min-width: 30em) {
-    padding-right: 5rem;
-    padding-left: 1.25rem;
+  @media (min-width: variables.$breakpoint-md) {
+    padding-left: var(--spacer-2);
   }
 }
 
@@ -109,7 +109,6 @@ a[href^="#fnref:"] {
 // Custom type
 //
 // Extend paragraphs with `.lead` for larger introductory text.
-
 .lead {
   font-size: 1.25rem;
   font-weight: 300;

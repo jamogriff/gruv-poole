@@ -17,14 +17,14 @@
 // Originally designed, built, and released under MIT license by @mdo.
 // Forked and revamped by Jamogriff: https://github.com/jamogriff/gruv-poole.
 
-@use "fonts";
+@use "typography/fonts";
 @use "variables";
+@use "mixins";
+@use "components";
 @use "base";
-@use "type";
-@use "syntax";
-@use "code";
-@use "layout";
+@use "typography/typography";
+@use "code/gruvbox";
+@use "code/wrappers";
 @use "masthead";
 @use "posts";
-@use "message";
-@use "toc";
+@use "home";

@@ -4,7 +4,7 @@ title: Example content
 ---
 
 **Howdy!** This is an example blog post that shows several types of HTML content supported in this theme.
-{: .message }
+{: .alert }
 
 Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
 
@@ -62,7 +62,7 @@ adder(2, 6);
 {% endhighlight %}
 
 Please note that this theme does **not** support Rouge's line number feature due to syntax highlighting being close to unreadable.
-{: .message }
+{: .alert }
 
 ### Lists
 

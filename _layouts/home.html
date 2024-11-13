@@ -5,9 +5,9 @@ layout: base
 {% include social_icons.html %}
 
 <div class="home">
-  <section class="author-bio">
-    <img class="author-img" src="{{ site.author.imageSrc | relative_url }}" alt="{{ site.author.name }}">
-    <p class="site-description">{{ site.description }}</p>
+  <section class="about">
+    <img src="{{ site.author.imageSrc | relative_url }}" alt="{{ site.author.name }}">
+    <p>{{ site.description }}</p>
     {% if site.author.socials.size > 0 %}
       <ul class="social-links">
         {% for social in site.author.socials %}
@@ -25,9 +25,8 @@ layout: base
   </section>
 
   {% comment %}
-    You can add any content you want to the template
-    that utilizes this layout and it will be rendered
-    instead of an archive index of posts
+    You can add any content you want to index.html 
+    and it will be rendered instead of the post archive
   {% endcomment %}
   {% assign content = content | strip_newlines %}
   {% if content != '' %}

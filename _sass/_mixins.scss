@@ -1,0 +1,17 @@
+@use 'variables';
+
+// Mixins
+//
+// Use these in other classes by calling @include
+
+@mixin show-flex-on-medium {
+    @media (min-width: variables.$breakpoint-md) {
+        display: flex !important
+    }
+}
+
+@mixin show-block-on-medium {
+    @media (min-width: variables.$breakpoint-md) {
+        display: block !important
+    }
+}
