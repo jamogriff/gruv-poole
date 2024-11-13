@@ -1,10 +1,36 @@
-# Setup
+### Content theme data
 title: Gruv Poole
-tagline: Aesthetic Excellence
-baseurl: ""
-permalink: pretty
+# Only used for site title on home page
+tagline: Gruvbox Jekyll theme
+# The `>` after `description:` means to ignore line-breaks until next key.
+# If you want to omit the line-break after the end of text, use `>-` instead.
+description: >
+  Write an awesome description for your new site here. You can edit this line
+  in _config.yml. It will appear in your document head meta (for Google search
+  results) and in your feed.xml site description.
 
-# Gems
+# Specify the author for blog posts
+author:
+  name: Jamison Griffith
+  url: https://jamogriff.dev
+  email: jamison.griffith@gmail.com
+  imageSrc: demo-assets/jamison.jpeg
+  # You can add more links here, but icons are only available
+  # for these platforms specifically
+  socials:
+    - id: github
+      url: https://github.com/jamogriff
+    - id: linkedin
+      url: https://github.com/jamogriff
+    - id: facebook
+      url: https://github.com/jamogriff
+    - id: instagram
+      url: https://github.com/jamogriff
+    - id: x
+      url: https://github.com/jamogriff
+
+### Developer-oriented config
+permalink: pretty
 plugins:
   - jekyll-seo-tag
 
@@ -23,11 +49,5 @@ sass:
   sourcemap: development
   style: compressed
 
-# Specify the author for blog posts
-author:
-  name: Jamison Griffith
-  url: https://jamogriff.dev
-  email: jamison.griffith@gmail.com
-
-# Custom vars
+# Release version
 version: 0.9.0

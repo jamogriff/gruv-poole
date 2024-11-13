@@ -2,12 +2,41 @@
 layout: base
 ---
 
+{% include social_icons.html %}
+
 <div class="home">
-  <section class="splash-view">
-    <h1>{{ site.title }}</h1>
-    <p class="lead">{{ site.description }}</p>
+  <section class="author-bio">
+    <img class="author-img" src="{{ site.author.imageSrc | relative_url }}" alt="{{ site.author.name }}">
+    <p class="site-description">{{ site.description }}</p>
+    {% if site.author.socials.size > 0 %}
+      <ul class="social-links">
+        {% for social in site.author.socials %}
+        <li>
+          <a href="{{ social.url }}" rel="noreferrer">
+            <svg>
+              <use xlink:href="#{{ social.id }}"></use>
+            </svg>
+            {{ social.id | capitalize }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </section>
-  <section>
-    {{ content }}
-  </section>
+
+  {% comment %}
+    You can add any content you want to the template
+    that utilizes this layout and it will be rendered
+    instead of an archive index of posts
+  {% endcomment %}
+  {% assign content = content | strip_newlines %}
+  {% if content != '' %}
+    <section>
+      {{ content }}
+    </section>
+  {% else %}
+    <section class="archive">
+      {% include posts-by-year.html %}
+    </section>
+  {% endif %}
 </div

@@ -4,21 +4,20 @@ layout: base
 
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string: "ordinal", "US" }}</time>
   {{ content }}
 </article>
 
 {% if site.related_posts != empty %}
 <aside class="related">
-  <h3>Related posts</h3>
-  <ul class="related-posts">
+  <h2>Related posts</h2>
+  <div class="related-posts">
     {% for post in site.related_posts limit:3 %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-        </a>
-      </li>
+      <div class="archive-item d-sm-flex">
+        <a href="{{ post.url | relative_url }}" class="flex-none">{{ post.title }}</a>
+        <div class="spacer d-none d-sm-block"></div>
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="archive-date flex-none">{{ post.date | date_to_string: "ordinal", "US" }}</time>
+      </div>
     {% endfor %}
   </ul>
 </aside>

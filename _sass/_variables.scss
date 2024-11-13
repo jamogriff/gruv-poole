@@ -1,3 +1,4 @@
+$breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 
@@ -44,8 +45,8 @@ $breakpoint-lg: 992px;
 
   /* Misc global variables */
   --body-font: "Jost", "Arial", sans-serif;
-  --body-font-size: 16px;
-  --body-line-height: 1.5;
+  --body-font-size: 17px;
+  --body-line-height: 1.6;
   --code-font: "OfficeCodePro", "Courier New", "Courier", monospace;
   --border-radius: .25rem;
   --spacer: 1rem;
@@ -55,15 +56,15 @@ $breakpoint-lg: 992px;
   /* Light theme specific colors */
   --body-color: var(--dark-4);
   --body-bg: var(--light-1);
+  --muted-color: var(--light-2);
 
   --link-color: var(--black);
   --link-border-color: var(--light-3);
-  --button-hover-color: var(--light-2);
 
   --heading-color: var(--dark-4);
   --date-color: var(--dark-2);
-  --text-highlight-bg: var(--yellow-light);
-  --message-bg: var(--yellow-light);
+  --text-highlight-bg: var(--purple-light);
+  --message-bg: var(--purple-light);
   --quote-color: var(--blue-dark);
   --quote-accent: var(--blue);
   --scrollbar-color: var(--light-2) var(--light-1);
@@ -78,6 +79,7 @@ $breakpoint-lg: 992px;
   :root {
     --body-color: var(--light-2);
     --body-bg: var(--dark-4);
+    --muted-color: var(--dark-3);
 
     --heading-color: var(--light-1);
     --date-color: var(--light-3);
@@ -89,7 +91,6 @@ $breakpoint-lg: 992px;
 
     --link-color: var(--light-1);
     --link-border-color: var(--dark-2);
-    --button-hover-color: var(--dark-4);
 
     --border-color: var(--light-3);
 

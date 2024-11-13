@@ -5,7 +5,7 @@
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin-bottom: var(--spacer-3);
 
   li + li {
     margin-top: .25rem;
@@ -43,23 +43,11 @@
 // Related posts
 .related {
   padding-top: var(--spacer-2);
-  padding-bottom: var(--spacer-2);
   margin-bottom: var(--spacer-2);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-}
+  border-top: 1px solid var(--muted-color);
 
-.related-posts {
-  padding-left: 0;
-  list-style: none;
-
-  h3 {
+  h2 {
     margin-top: 0;
-  }
-
-  a {
-    small {
-      color: var(--date-color);
-    }
+    margin-bottom: 1rem;
   }
 }
