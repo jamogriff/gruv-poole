@@ -1,33 +1,26 @@
-### Content theme data
 title: Gruv Poole
-# Only used for site title on home page
 tagline: Gruvbox Jekyll theme
-# The `>` after `description:` means to ignore line-breaks until next key.
-# If you want to omit the line-break after the end of text, use `>-` instead.
-description: >
-  Write an awesome description for your new site here. You can edit this line
-  in _config.yml. It will appear in your document head meta (for Google search
-  results) and in your feed.xml site description.
 
-# Specify the author for blog posts
-author:
+# Populate about section of homepage
+# Name and description are required,
+# whereas image and socials are optional
+about:
   name: Jamison Griffith
-  url: https://jamogriff.dev
-  email: jamison.griffith@gmail.com
-  imageSrc: demo-assets/jamison.jpeg
+  # The `>` after `description:` means to ignore line-breaks until next key.
+  # If you want to omit the line-break after the end of text, use `>-` instead.
+  description: >
+    Write an awesome description for your new site here. You can edit this line
+    in _config.yml. It will appear in your document head meta (for Google search
+    results) and in your feed.xml site description.
+  image: demo-assets/jamison.jpeg
   # You can add more links here, but icons are only available
   # for these platforms specifically
   socials:
-    - id: github
-      url: https://github.com/jamogriff
-    - id: linkedin
-      url: https://github.com/jamogriff
-    - id: facebook
-      url: https://github.com/jamogriff
-    - id: instagram
-      url: https://github.com/jamogriff
-    - id: x
-      url: https://github.com/jamogriff
+    - { id: github, url: https://github.com/jamogriff }
+    - { id: linkedin, url: https://github.com/jamogriff }
+    - { id: facebook, url: https://github.com/jamogriff }
+    - { id: instagram, url: https://github.com/jamogriff }
+    - { id: x, url: https://github.com/jamogriff }
 
 ### Developer-oriented config
 permalink: pretty
@@ -44,10 +37,12 @@ exclude:
   - README.md
   - scripts/
 
+liquid:
+  error_mode: strict
+  strict_variables: true
+  strict_filters: true
+
 sass:
   sass_dir: _sass
   sourcemap: development
   style: compressed
-
-# Release version
-version: 0.9.0

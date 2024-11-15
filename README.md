@@ -1,10 +1,17 @@
 # Gruv Poole
 
-Gruv Poole is a fork of the [Poole theme](https://github.com/poole/poole) for [Jekyll](http://jekyllrb.com), the static site generator. Gruv Poole provides a facelift to the original theme but its philosophy remains the same:
-> [Poole] provide[s] a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.
-[- @mdo](https://markdotto.com/)
+Gruv Poole is a fork of the [Poole theme](https://github.com/poole/poole) for [Jekyll](http://jekyllrb.com), the static site generator.
 
-Gruv Poole rebuilt Poole's color scheme to implement [Gruvbox's](https://github.com/morhetz/gruvbox) color palette and adds dedicated typefaces.
+Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connective tissue and skin:
+- implements the retro groove color palette from the Vim [Gruvbox theme](https://github.com/morhetz/gruvbox)
+- adds dedicated typefaces
+- adds a responsive two-column home layout with default, overridable main content
+- adds nav items to masthead
+- trims plugin fat
+- refactors stylesheets to be more focused
+
+That being said, [@mdo's philosophy](https://github.com/mdo) of the original theme remains the same:
+> [To] provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.
 
 <img src="demo-assets/dark.png" alt="Gruv Poole dark mode" width="430">
 <img src="demo-assets/light.png" alt="Gruv Poole light mode" width="430">
@@ -18,21 +25,58 @@ The Gruv Poole theme was intended to be distributed as a [Ruby Gem for Jekyll si
 In your Jekyll site's code, add the following to your Gemfile:
 `gem "jekyll-theme-gruv-poole"`
 
-And add the following line to your site's `_config.yml`:
+Add the following line to your site's `_config.yml`:
 `theme: gruv-poole`
 
-And then run `bundle`.
+Ensure that you have your `_config.yml` with the data needed to build the theme (see [Populating Content](#populating-content)) and then run `bundle` and `jekyll s`.
 
 ### Hacking on theme code
 
 Feel free to tweak this theme to your liking. Pay attention to the `.ruby-version` file for what version of Ruby to use-- [rbenv](https://github.com/rbenv/rbenv) is recommended for Ruby development.
 
-Once Ruby version is set, then run `bundle install` and then `bundle exec jekyll s` to build and serve the demo theme site. 
+Once Ruby version is set, then run `bundle install` and then `bundle exec jekyll s` to build and serve the demo theme site. Please note that you likely will need to populate your `_config.yml` with required fields (see [Populating Content](#populating-content)).
 Open <http://localhost:4000> in your browser, and voilà.
 
 For further resources (e.g. hosting free site on GitHub Pages, etc) see the original [Poole theme's documentation](https://github.com/poole/poole).
 
-## Contents At-A-Glance
+## Populating Content
+
+### Home page
+
+Gruv Poole's home page layout features an abbreviated about section with social links and a main content area.
+
+#### About section
+
+Populate the following properties in your `_config.yml` file to configure content for this section:
+```
+about:
+  # Required
+  name: Example name
+  # Required
+  description: Example description for the site
+  # Optional. If not present, then site tagline is displayed
+  image: assets/example.jpeg
+  # Optional
+  # You can add more links here, but icons are only available
+  # for these platforms specifically
+  socials:
+    - { id: github, url: https://example }
+    - { id: linkedin, url: https://example }
+    - { id: facebook, url: https://example }
+    - { id: instagram, url: https://example }
+    - { id: x, url: https://example }
+```
+
+#### Main section
+
+By default a post archive is displayed as the main content, but this can easily be overridden to be anything you want. To override this content you can add whatever HTML you want in `index.html`.
+
+### Masthead navigation
+
+Edit `_includes/nav.html` to add or remove navigation links from the masthead.
+
+
+## Contents and Features
 
 ### Site structure (HTML)
 
@@ -58,7 +102,7 @@ Google Analytics will only appear in production (i.e. adding `JEKYLL_ENV=product
 
 ### Plugins
 
-Gruv Poole trimmed the plugin fat of the original Poole theme. It only comes packaged with [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag#usage), which ensures your website gets the most useful meta tags.
+Gruv Poole comes packaged with [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag#usage), which ensures your website gets the most useful meta tags.
 
 ## Licenses
 

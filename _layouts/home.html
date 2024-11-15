@@ -6,11 +6,17 @@ layout: base
 
 <div class="home">
   <section class="about">
-    <img src="{{ site.author.imageSrc | relative_url }}" alt="{{ site.author.name }}">
-    <p>{{ site.description }}</p>
-    {% if site.author.socials.size > 0 %}
+    {% if site.about contains "image" %}
+      <img src="{{ site.about.image | relative_url }}" alt="{{ site.about.name }}">
+    {% else %}
+      <h1>{{ site.tagline }}</h1>
+    {% endif %}
+
+    <p>{{ site.about.description }}</p>
+
+    {% if site.about contains "socials" and site.about.socials.size > 0 %}
       <ul class="social-links">
-        {% for social in site.author.socials %}
+        {% for social in site.about.socials %}
         <li>
           <a href="{{ social.url }}" rel="noreferrer">
             <svg>
