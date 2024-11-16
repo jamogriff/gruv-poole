@@ -13,8 +13,13 @@ Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connec
 That being said, [@mdo's philosophy](https://github.com/mdo) of the original theme remains the same:
 > [To] provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.
 
-<img src="demo-assets/dark.png" alt="Gruv Poole dark mode" width="430">
-<img src="demo-assets/light.png" alt="Gruv Poole light mode" width="430">
+## Dark Mode Screenshots
+<img src="demo-assets/dark1.png" alt="Gruv Poole home dark mode" width="430">
+<img src="demo-assets/dark2.png" alt="Gruv Poole content dark mode" width="430">
+
+## Light Mode Screenshots
+<img src="demo-assets/light1.png" alt="Gruv Poole home light mode" width="430">
+<img src="demo-assets/light2.png" alt="Gruv Poole content light mode" width="430">
 
 
 ## Usage
@@ -97,8 +102,9 @@ To enable Google Analytics, add the following lines to your Jekyll site's `_conf
 ```yaml
   google_analytics: UA-NNNNNNNN-N
 ```
+Gruv Poole includes a dynamic privacy policy page (`/privacy-policy`), and will display a privacy policy dependant on whether Google Analytics is enabled.
 
-Google Analytics will only appear in production (i.e. adding `JEKYLL_ENV=production` [when building](https://jekyllrb.com/docs/configuration/environments/) the site).
+Note that Google Analytics will only be enabled in production (i.e. adding `JEKYLL_ENV=production` [when building](https://jekyllrb.com/docs/configuration/environments/) the site).
 
 ### Plugins
 
