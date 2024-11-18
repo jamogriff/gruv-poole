@@ -6,12 +6,14 @@ Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connec
 - implements the retro groove color palette from the Vim [Gruvbox theme](https://github.com/morhetz/gruvbox)
 - complies with the [WCAG 2.2 AA accessibility standard](https://www.wcag.com/resource/what-is-wcag)
 - adds dedicated [open source typefaces](#licenses)
-- adds a responsive two-column [home layout](#home-page-content) with default, overridable main content
+- adds a responsive two-column [home layout](#home-page-content) with overridable main content and social links
 - adds ability to add a few [nav items](#masthead-navigation) to masthead
 - trims plugin fat and refactors stylesheets to be more focused
 
-That being said, [@mdo's philosophy](https://github.com/mdo) of the original theme remains the same:
+Gruv Poole still aims to adhere to [@mdo's philosophy](https://github.com/mdo) of the original theme:
 > [To] provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.
+
+eave questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/jamogriff/gruv-poole/issues/new).
 
 ## Contents
 
@@ -82,7 +84,7 @@ Gruv Poole's home page layout features an abbreviated about section with social 
 #### About section
 
 Populate the following properties in your `_config.yml` file to configure content for this section:
-```
+```yaml
 about:
   # Required
   name: Example name
@@ -94,11 +96,14 @@ about:
   # You can add more links here, but icons are only available
   # for these platforms specifically
   socials:
-    - { id: github, url: https://example }
-    - { id: linkedin, url: https://example }
-    - { id: facebook, url: https://example }
-    - { id: instagram, url: https://example }
-    - { id: x, url: https://example }
+    - { id: github, url: https://github.com/jamogriff }
+    - { id: youtube, url: https://github.com/jamogriff }
+    - { id: linkedin, url: https://github.com/jamogriff }
+    - { id: facebook, url: https://github.com/jamogriff }
+    - { id: instagram, url: https://github.com/jamogriff }
+    - { id: reddit, url: https://github.com/jamogriff }
+    - { id: tiktok, url: https://github.com/jamogriff }
+    - { id: x, url: https://github.com/jamogriff }
 ```
 
 #### Main section
@@ -108,7 +113,7 @@ By default a post archive is displayed as the main content, but this can easily 
 ### Masthead navigation
 
 In your `_config.yml` you may add a couple of pages to be displayed as links in the navbar section of the site's masthead:
-```
+```yaml
 masthead_pages:
   - about.md
 ```
@@ -124,6 +129,9 @@ Gruv Poole includes a dynamic privacy policy page (`/privacy-policy`), and will 
 
 Note that Google Analytics will only be enabled in production (i.e. adding `JEKYLL_ENV=production` [when building](https://jekyllrb.com/docs/configuration/environments/) the site).
 
+### RSS
+
+Gruv Poole includes an RSS feed by default (`atom.xml`). If you'd like to advertise your RSS feed you can add `advertise_rss: true` to your config file and a link will be shown in the social links section on the home page.
 
 ## Licenses
 
