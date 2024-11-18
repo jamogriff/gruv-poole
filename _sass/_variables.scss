@@ -1,9 +1,14 @@
+@use 'sass:color';
+
 // Responsive breakpoints
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $max-width: 62rem;
 $max-content-width: 42rem;
+
+// One-off WCAG contrast fix for --red-light on dark mode
+$wcag-code-on-dark: color.scale(#fb4934, $lightness: 8%);
 
 :root {
   /* Base shades from light to dark */ 
@@ -59,7 +64,7 @@ $max-content-width: 42rem;
   --contrast-high: var(--dark-5);
   --contrast-med: var(--dark-4);
   --contrast-med-low: var(--dark-2);
-  --contrast-wcag: #505050; // Minimum contrast to be WCAG compliant
+  --contrast-wcag: var(--dark-1);
   --contrast-low: var(--light-3);
   --muted: var(--light-2);
   --background: var(--light-1);
@@ -70,6 +75,7 @@ $max-content-width: 42rem;
   --quote-color: var(--blue-dark);
   --quote-accent: var(--blue);
   --code-color: var(--red-dark);
+  --code-color-wcag: var(--red-dark);
 }
 
 /* Dark theme specific contrast and colors */
@@ -78,7 +84,7 @@ $max-content-width: 42rem;
     --contrast-high: var(--light-1);
     --contrast-med: var(--light-2);
     --contrast-med-low: var(--light-3);
-    --contrast-wcag: #C3B18F; // Minimum contrast to be WCAG compliant
+    --contrast-wcag: var(--light-5);
     --contrast-low: var(--dark-2);
     --muted: var(--dark-3);
     --background: var(--dark-4);
@@ -89,5 +95,6 @@ $max-content-width: 42rem;
     --quote-color: var(--blue-light);
     --quote-accent: var(--blue);
     --code-color: var(--red-light);
+    --code-color-wcag: #{$wcag-code-on-dark};
   }
 }

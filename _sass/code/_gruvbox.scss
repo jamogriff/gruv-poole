@@ -1,3 +1,10 @@
+@use "sass:color";
+
+// Comment colors may not be WCAG compliant,
+// so adjustments made here
+$comment-lighter: color.scale(#928374, $lightness: 8%);
+$comment-darker: color.scale(#928374, $lightness: -17%);
+
 .highlight, .highlight .w {
 color: #282828;
 background-color: #fbf1c7;
@@ -8,7 +15,7 @@ background-color: #fbf1c7;
 font-weight: bold;
 }
 .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
-color: #928374;
+color: $comment-darker;
 font-style: italic;
 }
 .highlight .cp {
@@ -105,7 +112,7 @@ color: #076678;
   font-weight: bold;
   }
   .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
-  color: #928374;
+  color: $comment-lighter;
   font-style: italic;
   }
   .highlight .cp {
