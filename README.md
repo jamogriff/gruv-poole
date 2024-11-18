@@ -6,19 +6,28 @@ Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connec
 - implements the retro groove color palette from the Vim [Gruvbox theme](https://github.com/morhetz/gruvbox)
 - complies with the [WCAG 2.2 AA accessibility standard](https://www.wcag.com/resource/what-is-wcag)
 - adds dedicated [open source typefaces](#licenses)
-- adds a responsive two-column [home layout](#home-page) with default, overridable main content
+- adds a responsive two-column [home layout](#home-page-content) with default, overridable main content
 - adds ability to add a few [nav items](#masthead-navigation) to masthead
-- trims [plugin](#plugins) fat
-- refactors stylesheets to be more focused
+- trims plugin fat and refactors stylesheets to be more focused
 
 That being said, [@mdo's philosophy](https://github.com/mdo) of the original theme remains the same:
 > [To] provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.
 
-## Dark Mode Screenshots
+## Contents
+
+- [Screenshots](#screenshots)
+- [Usage](#usage)
+- [Theme Overview](#theme-overview)
+- [Configuration Options](#configuration-options)
+- [Licenses](#licenses)
+
+## Screenshots
+
+### Dark Mode
 <img src="demo-assets/dark1.png" alt="Gruv Poole home dark mode" width="430">
 <img src="demo-assets/dark2.png" alt="Gruv Poole content dark mode" width="430">
 
-## Light Mode Screenshots
+### Light Mode
 <img src="demo-assets/light1.png" alt="Gruv Poole home light mode" width="430">
 <img src="demo-assets/light2.png" alt="Gruv Poole content light mode" width="430">
 
@@ -34,7 +43,7 @@ In your Jekyll site's code, add the following to your Gemfile:
 Add the following line to your site's `_config.yml`:
 `theme: gruv-poole`
 
-Ensure that you have your `_config.yml` with the data needed to build the theme (see [Populating Content](#populating-content)) and then run `bundle` and `jekyll s`.
+Ensure that you have your `_config.yml` with the data needed to build the theme (see [Configuration Options](#configuration-options)) and then run `bundle` and `jekyll s`.
 
 ### Hacking on theme code
 
@@ -45,9 +54,28 @@ Open <http://localhost:4000> in your browser, and voilà.
 
 For further resources (e.g. hosting free site on GitHub Pages, etc) see the original [Poole theme's documentation](https://github.com/poole/poole).
 
-## Populating Content
+## Theme Overview
 
-### Home page
+### Site structure (HTML)
+
+The files within the `_layouts` directory define the HTML structure of pages and posts on the site. `_layouts/base.html` is the base HTML of the theme, which all other layouts should extend from.
+
+Re-usable snippets of HTML code--also known as partials-- are placed in the `_includes` directory. 
+
+### Site styling (Sass/CSS)
+
+All of the site's styling resides in the `_sass` directory. The most noteworthy being `_variables.scss`, where CSS variables can be quickly tweaked to change the look and feel of the theme.
+
+The theme's main style file that ultimately gets imported to the site's base HTML layout is `/assets/main.scss`. This `main.scss` file imports all of the Sass files in the `_sass` directory and Jekyll's Sass compilation outputs a single `main.css` similar to Webpack.
+
+### Plugins
+
+Gruv Poole comes packaged with [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag#usage), which ensures your website gets the most useful meta tags.
+
+
+## Configuration Options
+
+### Home page content
 
 Gruv Poole's home page layout features an abbreviated about section with social links and a main content area.
 
@@ -85,21 +113,7 @@ masthead_pages:
   - about.md
 ```
 
-## Theme Overview
-
-### Site structure (HTML)
-
-The files within the `_layouts` directory define the HTML structure of pages and posts on the site. `_layouts/base.html` is the base HTML of the theme, which all other layouts should extend from.
-
-Re-usable snippets of HTML code--also known as partials-- are placed in the `_includes` directory. 
-
-### Site styling (Sass/CSS)
-
-All of the site's styling resides in the `_sass` directory. The most noteworthy being `_variables.scss`, where CSS variables can be quickly tweaked to change the look and feel of the theme.
-
-The theme's main style file that ultimately gets imported to the site's base HTML layout is `/assets/main.scss`. This `main.scss` file imports all of the Sass files in the `_sass` directory and Jekyll's Sass compilation outputs a single `main.css` similar to Webpack.
-
-### Enabling Google Analytics
+### Google Analytics
 
 To enable Google Analytics, add the following lines to your Jekyll site's `_config.yml`:
 
@@ -110,9 +124,6 @@ Gruv Poole includes a dynamic privacy policy page (`/privacy-policy`), and will 
 
 Note that Google Analytics will only be enabled in production (i.e. adding `JEKYLL_ENV=production` [when building](https://jekyllrb.com/docs/configuration/environments/) the site).
 
-### Plugins
-
-Gruv Poole comes packaged with [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag#usage), which ensures your website gets the most useful meta tags.
 
 ## Licenses
 
