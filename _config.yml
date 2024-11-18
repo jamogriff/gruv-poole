@@ -17,9 +17,12 @@ about:
   # for these platforms specifically
   socials:
     - { id: github, url: https://github.com/jamogriff }
+    - { id: youtube, url: https://github.com/jamogriff }
     - { id: linkedin, url: https://github.com/jamogriff }
     - { id: facebook, url: https://github.com/jamogriff }
     - { id: instagram, url: https://github.com/jamogriff }
+    - { id: reddit, url: https://github.com/jamogriff }
+    - { id: tiktok, url: https://github.com/jamogriff }
     - { id: x, url: https://github.com/jamogriff }
 
 google_analytics: nil
