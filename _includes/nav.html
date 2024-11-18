@@ -1,8 +1,12 @@
-<ul class="nav">
-  <li>
-    <a href="{% link index.html %}">Writing</a>
-  </li>
-  <li>
-    <a href="{% link about.md %}">About</a>
-  </li>
-</ul>
+{% if site.masthead_pages.size > 0 %}
+  <ul class="nav">
+    {% for page in site.masthead_pages %}
+      {%- assign site_page = site.pages | where: "path", page | first -%}
+      {%- if site_page.title -%}
+        <li>
+          <a href="{{ site_page.url | relative_url }}">{{ site_page.title | escape }}</a>
+        </li>
+      {%- endif -%}
+    {% endfor %}
+  </ul>
+{% endif %}

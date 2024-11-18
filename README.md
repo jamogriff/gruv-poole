@@ -4,10 +4,11 @@ Gruv Poole is a fork of the [Poole theme](https://github.com/poole/poole) for [J
 
 Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connective tissue and skin:
 - implements the retro groove color palette from the Vim [Gruvbox theme](https://github.com/morhetz/gruvbox)
-- adds dedicated typefaces
-- adds a responsive two-column home layout with default, overridable main content
-- adds nav items to masthead
-- trims plugin fat
+- complies with the [WCAG 2.2 AA accessibility standard](https://www.wcag.com/resource/what-is-wcag)
+- adds dedicated [open source typefaces](#licenses)
+- adds a responsive two-column [home layout](#home-page) with default, overridable main content
+- adds ability to add a few [nav items](#masthead-navigation) to masthead
+- trims [plugin](#plugins) fat
 - refactors stylesheets to be more focused
 
 That being said, [@mdo's philosophy](https://github.com/mdo) of the original theme remains the same:
@@ -78,10 +79,13 @@ By default a post archive is displayed as the main content, but this can easily 
 
 ### Masthead navigation
 
-Edit `_includes/nav.html` to add or remove navigation links from the masthead.
+In your `_config.yml` you may add a couple of pages to be displayed as links in the navbar section of the site's masthead:
+```
+masthead_pages:
+  - about.md
+```
 
-
-## Contents and Features
+## Theme Overview
 
 ### Site structure (HTML)
 

@@ -25,6 +25,11 @@ about:
     - { id: tiktok, url: https://github.com/jamogriff }
     - { id: x, url: https://github.com/jamogriff }
 
+# Add any pages that you want to be
+# included in the masthead's navbar
+masthead_pages:
+  - about.md
+
 google_analytics: nil
 advertise_rss: true
 
