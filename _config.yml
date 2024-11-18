@@ -12,7 +12,7 @@ about:
     Write an awesome description for your new site here. You can edit this line
     in _config.yml. It will appear in your document head meta (for Google search
     results) and in your feed.xml site description.
-  image: demo-assets/jamison.jpeg
+  image: demo-assets/jamo.jpg
   # You can add more links here, but icons are only available
   # for these platforms specifically
   socials:
@@ -21,6 +21,9 @@ about:
     - { id: facebook, url: https://github.com/jamogriff }
     - { id: instagram, url: https://github.com/jamogriff }
     - { id: x, url: https://github.com/jamogriff }
+
+google_analytics: nil
+advertise_rss: true
 
 ### Developer-oriented config
 permalink: pretty
@@ -39,7 +42,9 @@ exclude:
 
 liquid:
   error_mode: strict
-  strict_variables: true
+  # Don't really recommend strict mode
+  # until this is resolved: https://github.com/Shopify/liquid/issues/1034
+  strict_variables: false
   strict_filters: true
 
 sass:

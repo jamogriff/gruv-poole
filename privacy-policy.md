@@ -3,7 +3,7 @@ layout: page
 title: Privacy Policy
 ---
 
-{% if site.keys contains "google_analytics" %}
+{% if site.google_analytics %}
   {{ site.title }} utilizes Google Analytics. You may refer to the summarization below for how your data is collected and processed. Google's own [labyrinthine privacy policy](https://support.google.com/analytics/answer/7318509?hl=en) can also be found for the most up to date information.
   {: .lead}
   ---
