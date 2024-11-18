@@ -59,6 +59,7 @@ $max-content-width: 42rem;
   --contrast-high: var(--dark-5);
   --contrast-med: var(--dark-4);
   --contrast-med-low: var(--dark-2);
+  --contrast-wcag: #505050; // Minimum contrast to be WCAG compliant
   --contrast-low: var(--light-3);
   --muted: var(--light-2);
   --background: var(--light-1);
@@ -77,6 +78,7 @@ $max-content-width: 42rem;
     --contrast-high: var(--light-1);
     --contrast-med: var(--light-2);
     --contrast-med-low: var(--light-3);
+    --contrast-wcag: #C3B18F; // Minimum contrast to be WCAG compliant
     --contrast-low: var(--dark-2);
     --muted: var(--dark-3);
     --background: var(--dark-4);
