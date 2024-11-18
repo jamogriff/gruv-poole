@@ -8,12 +8,12 @@ Gruv Poole is a fork of the [Poole theme](https://github.com/poole/poole) for [J
 Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connective tissue and skin:
 - implements the retro groove color palette from the Vim [Gruvbox theme](https://github.com/morhetz/gruvbox)
 - complies with the [WCAG 2.2 AA accessibility standard](https://www.wcag.com/resource/what-is-wcag)
-- adds dedicated [open source typefaces](#licenses)
-- adds a responsive two-column [home layout](#home-page-content) with overridable main content and social links
-- adds ability to add a few [nav items](#masthead-navigation) to masthead
+- adds dedicated open source typefaces
+- adds a responsive two-column home layout with overridable main content and social links
+- adds ability to add a few nav items to masthead
 - trims plugin fat and refactors stylesheets to be more focused
 
-Gruv Poole still aims to adhere to [@mdo's philosophy](https://github.com/mdo) of the original theme:
+Gruv Poole still aims to adhere to [@mdo's](https://github.com/mdo) philosophy of the original theme:
 > [To] provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.
 
 Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/jamogriff/gruv-poole/issues/new).

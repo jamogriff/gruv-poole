@@ -10,10 +10,10 @@ Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connec
 - adds ability to add a few [nav items](#masthead-navigation) to masthead
 - trims plugin fat and refactors stylesheets to be more focused
 
-Gruv Poole still aims to adhere to [@mdo's philosophy](https://github.com/mdo) of the original theme:
+Gruv Poole still aims to adhere to [@mdo's](https://github.com/mdo) philosophy of the original theme:
 > [To] provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.
 
-eave questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/jamogriff/gruv-poole/issues/new).
+Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/jamogriff/gruv-poole/issues/new).
 
 ## Contents
 
@@ -43,7 +43,9 @@ In your Jekyll site's code, add the following to your Gemfile:
 `gem "jekyll-theme-gruv-poole"`
 
 Add the following line to your site's `_config.yml`:
-`theme: gruv-poole`
+```yaml
+theme: gruv-poole
+```
 
 Ensure that you have your `_config.yml` with the data needed to build the theme (see [Configuration Options](#configuration-options)) and then run `bundle` and `jekyll s`.
 
@@ -51,7 +53,7 @@ Ensure that you have your `_config.yml` with the data needed to build the theme 
 
 Feel free to tweak this theme to your liking. Pay attention to the `.ruby-version` file for what version of Ruby to use-- [rbenv](https://github.com/rbenv/rbenv) is recommended for Ruby development.
 
-Once Ruby version is set, then run `bundle install` and then `bundle exec jekyll s` to build and serve the demo theme site. Please note that you likely will need to populate your `_config.yml` with required fields (see [Populating Content](#populating-content)).
+Once Ruby version is set, then run `bundle install` and then `bundle exec jekyll s` to build and serve the demo theme site. Please note that you likely will need to populate your `_config.yml` with required fields (see [Configuration Options](#configuration-options)).
 Open <http://localhost:4000> in your browser, and voilà.
 
 For further resources (e.g. hosting free site on GitHub Pages, etc) see the original [Poole theme's documentation](https://github.com/poole/poole).
@@ -123,7 +125,7 @@ masthead_pages:
 To enable Google Analytics, add the following lines to your Jekyll site's `_config.yml`:
 
 ```yaml
-  google_analytics: UA-NNNNNNNN-N
+google_analytics: UA-NNNNNNNN-N
 ```
 Gruv Poole includes a dynamic privacy policy page (`/privacy-policy`), and will display a privacy policy dependant on whether Google Analytics is enabled.
 
