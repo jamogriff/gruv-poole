@@ -1,12 +1,12 @@
 {% if site.masthead_pages.size > 0 %}
   <ul class="nav">
     {% for page in site.masthead_pages %}
-      {%- assign site_page = site.pages | where: "path", page | first -%}
-      {%- if site_page.title -%}
+      {% assign site_page = site.pages | where: "path", page | first %}
+      {% if site_page.title %}
         <li>
           <a href="{{ site_page.url | relative_url }}">{{ site_page.title | escape }}</a>
         </li>
-      {%- endif -%}
+      {% endif %}
     {% endfor %}
   </ul>
 {% endif %}

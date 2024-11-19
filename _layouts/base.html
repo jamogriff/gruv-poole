@@ -7,7 +7,7 @@
     <div class="container">
       <header class="masthead">
         <h3 class="masthead-title">
-          <a href="{% link index.html %}" title="Home">{{ site.title }}</a>
+          <a href="{{ "/" | relative_url }}" title="Home">{{ site.title }}</a>
         </h3>
         {% include nav.html %}
       </header>
@@ -19,7 +19,13 @@
       <footer>
         <div class="links">
           <a href="https://github.com/jamogriff/gruv-poole">Open Source Theme</a>
-          <a href="{% link privacy-policy.md %}">Privacy Policy</a>
+
+          {% assign privacy_page = site.pages | where: "layout", "privacy-policy" | first %}
+          {% if privacy_page %}
+            <a href="{{ privacy_page.url | relative_url }}">Privacy Policy</a>
+          {% else %}
+            <mark>Please create a page that implements the privacy-policy layout.</mark>
+          {% endif %}
         </div>
         <div>
           &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.

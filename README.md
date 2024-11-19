@@ -8,6 +8,7 @@ Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connec
 - adds dedicated [open source typefaces](#licenses)
 - adds a responsive two-column [home layout](#home-page-content) with overridable main content and social links
 - adds ability to add a few [nav items](#masthead-navigation) to masthead
+- adds dynamic privacy policy based on your [Google Analytics configuration](#privacy-and-google-analytics)
 - trims plugin fat and refactors stylesheets to be more focused
 
 Gruv Poole still aims to adhere to [@mdo's](https://github.com/mdo) philosophy of the original theme:
@@ -120,20 +121,24 @@ masthead_pages:
   - about.md
 ```
 
-### Google Analytics
+### Privacy and Google Analytics
+
+Gruv Poole includes a dynamic privacy policy layout (`privacy-policy`) **that you must implement in a page on your site.** The layout will display a privacy policy dependant on whether Google Analytics is enabled on your site.
 
 To enable Google Analytics, add the following lines to your Jekyll site's `_config.yml`:
 
 ```yaml
 google_analytics: UA-NNNNNNNN-N
 ```
-Gruv Poole includes a dynamic privacy policy page (`/privacy-policy`), and will display a privacy policy dependant on whether Google Analytics is enabled.
 
 Note that Google Analytics will only be enabled in production (i.e. adding `JEKYLL_ENV=production` [when building](https://jekyllrb.com/docs/configuration/environments/) the site).
 
-### RSS
+### Advertise RSS
 
-Gruv Poole includes an RSS feed by default (`atom.xml`). If you'd like to advertise your RSS feed you can add `advertise_rss: true` to your config file and a link will be shown in the social links section on the home page.
+Gruv Poole **does not** generate an RSS feed by default (see [jekyll-feed plugin](https://github.com/jekyll/jekyll-feed)); however, it will include a link with RSS icon in the social links area if you add the feed's path in your config:
+```yaml
+rss_feed: feed.xml
+```
 
 ## Licenses
 

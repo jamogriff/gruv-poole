@@ -11,6 +11,7 @@ Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connec
 - adds dedicated open source typefaces
 - adds a responsive two-column home layout with overridable main content and social links
 - adds ability to add a few nav items to masthead
+- adds dynamic privacy policy based on your Google Analytics configuration
 - trims plugin fat and refactors stylesheets to be more focused
 
 Gruv Poole still aims to adhere to [@mdo's](https://github.com/mdo) philosophy of the original theme:

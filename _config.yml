@@ -30,8 +30,10 @@ about:
 masthead_pages:
   - about.md
 
-google_analytics: nil
-advertise_rss: true
+rss_feed: atom.xml
+
+# Replace with your own ID
+# google_analytics:UA-NNNNNNNN-N
 
 ### Developer-oriented config
 permalink: pretty
