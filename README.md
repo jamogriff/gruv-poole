@@ -49,13 +49,13 @@ Add the following line to your site's `_config.yml`:
 theme: gruv-poole
 ```
 
-Ensure that you have your `_config.yml` with the data needed to build the theme (see [Configuration Options](#configuration-options)) and then run `bundle` and `jekyll s`.
+Ensure that you have your `_config.yml` with the data necessary to build the theme (see [Configuration Options](#configuration-options)) and then run `bundle` and `jekyll s`.
 
 ### Hacking on theme code
 
 Feel free to tweak this theme to your liking. Pay attention to the `.ruby-version` file for what version of Ruby to use-- [rbenv](https://github.com/rbenv/rbenv) is recommended for Ruby development.
 
-Once Ruby version is set, then run `bundle install` and then `bundle exec jekyll s` to build and serve the demo theme site. Please note that you likely will need to populate your `_config.yml` with required fields (see [Configuration Options](#configuration-options)).
+Once Ruby version is set, then run `bundle install` and then `bundle exec jekyll s` to build and serve the demo theme site. Please note this theme's [Configuration Options](#configuration-options)).
 Open <http://localhost:4000> in your browser, and voilà.
 
 For further resources (e.g. hosting free site on GitHub Pages, etc) see the original [Poole theme's documentation](https://github.com/poole/poole).
