@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-gruv-poole"
-  spec.version       = "0.9.0"
+  spec.version       = "1.0.0"
   spec.authors       = ["Jamison Griffith"]
   spec.email         = ["jamison.griffith@gmail.com"]
 
-  spec.summary       = "Aesthetic facelift of the Poole theme inspired by Gruvbox."
+  spec.summary       = "A modern, WCAG-compliant fork of the Poole theme inspired by the Gruvbox color scheme."
   spec.homepage      = "https://github.com/jamogriff/gruv-poole"
   spec.license       = "MIT"
 

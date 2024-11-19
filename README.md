@@ -1,6 +1,6 @@
 # Gruv Poole
 
-Gruv Poole is a fork of the [Poole theme](https://github.com/poole/poole) for [Jekyll](http://jekyllrb.com), the static site generator.
+Gruv Poole is a modern, WCAG-compliant fork of the [Poole theme](https://github.com/poole/poole) for [Jekyll](http://jekyllrb.com), the static site generator.
 
 Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connective tissue and skin:
 - implements the retro groove color palette from the Vim [Gruvbox theme](https://github.com/morhetz/gruvbox)

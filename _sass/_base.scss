@@ -1,4 +1,5 @@
 @use "variables";
+@use "mixins" as *;
 // Foundational styles
 //
 // Update the foundational and global aspects of the page.
@@ -26,11 +27,25 @@ body {
 
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-top: var(--spacer-2);
   font-size: 0.875rem;
   border-top: 0.125rem solid var(--muted);
+
+  .links {
+    @include inline-flex;
+    margin-bottom: var(--spacer);
+
+    @media(min-width: variables.$breakpoint-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media(min-width: variables.$breakpoint-md) {
+    flex-direction: row;
+  }
 }
 
 a {
