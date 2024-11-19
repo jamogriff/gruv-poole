@@ -13,9 +13,6 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
 
   spec.required_ruby_version = '>=2.7'
-
   spec.add_runtime_dependency "jekyll", "~> 4.3"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
-
-  spec.add_development_dependency "bundler", "~> 2.5"
+  spec.add_development_dependency "bundler"
 end

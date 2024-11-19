@@ -7,9 +7,10 @@ Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connec
 - complies with the [WCAG 2.2 AA accessibility standard](https://www.wcag.com/resource/what-is-wcag)
 - adds dedicated [open source typefaces](#licenses)
 - adds a responsive two-column [home layout](#home-page-content) with overridable main content and social links
-- adds ability to add a few [nav items](#masthead-navigation) to masthead
 - adds dynamic privacy policy based on your [Google Analytics configuration](#privacy-and-google-analytics)
-- trims plugin fat and refactors stylesheets to be more focused
+- removes paginator plugin in favor of adding ability to create [nav items in the masthead](#masthead-navigation)
+- removes RSS and SEO plugins and replaces with configurable behavior
+- refactors stylesheets to be more focused
 
 Gruv Poole still aims to adhere to [@mdo's](https://github.com/mdo) philosophy of the original theme:
 > [To] provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.
@@ -73,12 +74,16 @@ All of the site's styling resides in the `_sass` directory. The most noteworthy 
 
 The theme's main style file that ultimately gets imported to the site's base HTML layout is `/assets/main.scss`. This `main.scss` file imports all of the Sass files in the `_sass` directory and Jekyll's Sass compilation outputs a single `main.css` similar to Webpack.
 
-### Plugins
-
-Gruv Poole comes packaged with [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag#usage), which ensures your website gets the most useful meta tags.
-
-
 ## Configuration Options
+
+All the options and content in this section are configured in your site's `_config.yml` file. Note that [YAML](https://yaml.org/) syntax is very specific about spacing.
+
+The following properties should be considered required and are typical of a Jekyll theme:
+```yaml
+title: Gruv Poole
+tagline: Gruvbox Jekyll theme
+description: This description will be used in meta tags for SEO and displayed on the homepage
+```
 
 ### Home page content
 
@@ -86,16 +91,13 @@ Gruv Poole's home page layout features an abbreviated about section with social 
 
 #### About section
 
-Populate the following properties in your `_config.yml` file to configure content for this section:
+These are optional, but the theme was designed to render them.
+
 ```yaml
 about:
-  # Required
-  name: Example name
-  # Required
-  description: Example description for the site
-  # Optional. If not present, then site tagline is displayed
-  image: assets/example.jpeg
-  # Optional
+  image:
+    src: demo-assets/jamo.jpg
+    alt: Image of Jamogriff
   # You can add more links here, but icons are only available
   # for these platforms specifically
   socials:
@@ -109,13 +111,18 @@ about:
     - { id: x, url: https://github.com/jamogriff }
 ```
 
+Additionally the theme also supports advertising an RSS feed. Gruv Poole itself **does not** generate an RSS feed by default (see [jekyll-feed plugin](https://github.com/jekyll/jekyll-feed)); however, it will include a link with RSS icon in the social links area if you add the feed's path in your config:
+```yaml
+rss_feed: feed.xml
+```
+
 #### Main section
 
-By default a post archive is displayed as the main content, but this can easily be overridden to be anything you want. To override this content you can add whatever HTML you want in `index.html`.
+By default a post archive is displayed as the main content, but this can easily be overridden to be anything you want. To override this content you can add whatever HTML you want in a page that implements the `home` layout.
 
 ### Masthead navigation
 
-In your `_config.yml` you may add a couple of pages to be displayed as links in the navbar section of the site's masthead:
+You may add a couple of pages to be displayed as links in the navbar section of the site's masthead:
 ```yaml
 masthead_pages:
   - about.md
@@ -133,12 +140,15 @@ google_analytics: UA-NNNNNNNN-N
 
 Note that Google Analytics will only be enabled in production (i.e. adding `JEKYLL_ENV=production` [when building](https://jekyllrb.com/docs/configuration/environments/) the site).
 
-### Advertise RSS
+### SEO
 
-Gruv Poole **does not** generate an RSS feed by default (see [jekyll-feed plugin](https://github.com/jekyll/jekyll-feed)); however, it will include a link with RSS icon in the social links area if you add the feed's path in your config:
+Gruv Poole offers a very simple implementation of SEO that only targets the [description meta tag](https://developers.google.com/search/docs/crawling-indexing/special-tags). You are encouraged to add a `description` to the front matter of posts and pages to leverage this. Otherwise, the site description is used by default.
+
+If you want to opt out of this behavior (e.g. you want to use an SEO plugin), then add the following to your config:
 ```yaml
-rss_feed: feed.xml
+disable_simple_seo: true
 ```
+---
 
 ## Licenses
 

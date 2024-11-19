@@ -1,18 +1,19 @@
 title: Gruv Poole
 tagline: Gruvbox Jekyll theme
+# The `>` after `description:` means to ignore line-breaks until next key.
+# If you want to omit the line-break after the end of text, use `>-` instead.
+description: >
+  Write an awesome description for your new site here. You can edit this line
+  in _config.yml. It will appear in your document head meta (for Google search
+  results) and in the about section of the homepage.
 
 # Populate about section of homepage
-# Name and description are required,
-# whereas image and socials are optional
+# These are optional, but the theme
+# supports rendering them
 about:
-  name: Jamison Griffith
-  # The `>` after `description:` means to ignore line-breaks until next key.
-  # If you want to omit the line-break after the end of text, use `>-` instead.
-  description: >
-    Write an awesome description for your new site here. You can edit this line
-    in _config.yml. It will appear in your document head meta (for Google search
-    results) and in your feed.xml site description.
-  image: demo-assets/jamo.jpg
+  image:
+    src: demo-assets/jamo.jpg
+    alt: Image of Jamogriff
   # You can add more links here, but icons are only available
   # for these platforms specifically
   socials:
@@ -30,15 +31,22 @@ about:
 masthead_pages:
   - about.md
 
-rss_feed: atom.xml
-
 # Replace with your own ID
+# if you want Google Analytics
 # google_analytics:UA-NNNNNNNN-N
+
+# If you have an RSS
+# feed plugin and want to
+# advertise the feed, then
+# set the feed file here
+# rss_feed: atom.xml
+
+# If you intend to use 
+# an SEO plugin, then uncomment
+# disable_simple_seo: true
 
 ### Developer-oriented config
 permalink: pretty
-plugins:
-  - jekyll-seo-tag
 
 # Optimize Jekyll
 exclude:

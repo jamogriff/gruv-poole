@@ -10,9 +10,10 @@ Poole's bones serve as the foundation, and Gruv Poole revamps the muscle, connec
 - complies with the [WCAG 2.2 AA accessibility standard](https://www.wcag.com/resource/what-is-wcag)
 - adds dedicated open source typefaces
 - adds a responsive two-column home layout with overridable main content and social links
-- adds ability to add a few nav items to masthead
 - adds dynamic privacy policy based on your Google Analytics configuration
-- trims plugin fat and refactors stylesheets to be more focused
+- removes paginator plugin in favor of adding ability to create [nav items in the masthead](#masthead-navigation)
+- removes RSS and SEO plugins and replaces with configurable behavior
+- refactors stylesheets to be more focused
 
 Gruv Poole still aims to adhere to [@mdo's](https://github.com/mdo) philosophy of the original theme:
 > [To] provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.

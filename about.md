@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+description: Hoho SEO
 ---
 
 <p class="alert">
