@@ -31,6 +31,8 @@ Have questions or suggestions? Feel free to [open an issue on GitHub](https://gi
 <img src="demo-assets/dark1.png" alt="Gruv Poole home dark mode" width="430">
 <img src="demo-assets/dark2.png" alt="Gruv Poole content dark mode" width="430">
 
+> Dark mode is enabled automatically via [CSS media query](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) dependent on what the user's system preference is set as.
+
 ### Light Mode
 <img src="demo-assets/light1.png" alt="Gruv Poole home light mode" width="430">
 <img src="demo-assets/light2.png" alt="Gruv Poole content light mode" width="430">
@@ -38,7 +40,7 @@ Have questions or suggestions? Feel free to [open an issue on GitHub](https://gi
 
 ## Usage
 
-### Install as a Gem
+### Option 1: Install as a Gem
 
 The Gruv Poole theme was intended to be distributed as a [Ruby Gem for Jekyll sites](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes).
 In your Jekyll site's code, add the following to your Gemfile:
@@ -51,14 +53,12 @@ theme: gruv-poole
 
 Ensure that you have your `_config.yml` with the data necessary to build the theme (see [Configuration Options](#configuration-options)) and then run `bundle` and `jekyll s`.
 
-### Hacking on theme code
+### Option 2: Hacking on theme code
 
 Feel free to tweak this theme to your liking. Pay attention to the `.ruby-version` file for what version of Ruby to use-- [rbenv](https://github.com/rbenv/rbenv) is recommended for Ruby development.
 
 Once Ruby version is set, then run `bundle install` and then `bundle exec jekyll s` to build and serve the demo theme site. Please note this theme's [Configuration Options](#configuration-options)).
 Open <http://localhost:4000> in your browser, and voilà.
-
-For further resources (e.g. hosting free site on GitHub Pages, etc) see the original [Poole theme's documentation](https://github.com/poole/poole).
 
 ## Theme Overview
 
@@ -148,8 +148,11 @@ If you want to opt out of this behavior (e.g. you want to use an SEO plugin), th
 ```yaml
 disable_simple_seo: true
 ```
----
 
 ## Licenses
 
 Open sourced under the [MIT license](LICENSE.md). Fonts are both licensed under the [SIL Open Font License](https://openfontlicense.org/). Their licenses can be found [here](assets/fonts/body/LICENSE.md) and [here](assets/fonts/code/LICENSE.md).
+
+---
+
+For further resources (e.g. hosting free site on GitHub Pages, etc) see the original [Poole theme's documentation](https://github.com/poole/poole).
