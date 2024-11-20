@@ -11,7 +11,13 @@ pre {
 
 code {
   font-size: 85%;
-  color: var(--code-color-wcag);
+}
+
+// Only apply code color to inline
+// code elements. Multiline are handled
+// through Rouge (and applies gruvbox.scss styles)
+code:not(pre>code) {
+  color: var(--code-color);
 }
 
 pre {
@@ -30,10 +36,6 @@ pre {
 
   pre {
     margin-bottom: 0;
-  }
-
-  code {
-    color: var(--code-color);
   }
 
   // Triple backticks (code fencing) doubles the .highlight elements

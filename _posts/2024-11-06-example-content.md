@@ -65,6 +65,48 @@ adder(2, 6);
 Please note that this theme does **not** support Rouge's line number feature due to syntax highlighting being close to unreadable.
 {: .alert }
 
+```ruby
+# Definition for a binary tree node.
+# class TreeNode
+#     attr_accessor :val, :left, :right
+#     def initialize(val = 0, left = nil, right = nil)
+#         @val = val
+#         @left = left
+#         @right = right
+#     end
+# end
+# @param {TreeNode} root
+# @return {Float[]}
+
+# Find the average val at each level of a binary tree
+def average_of_levels(root)
+  queue = [root]
+  avg_per_level = []
+    
+  while (!queue.empty?) do
+    # For a binary tree of n levels we should hit this block n times
+    level_sum = 0
+    elems_in_level = queue.length
+      
+    # An each loop isn't appropiate here because we're adding children
+    # to the next queue to be processed at the end of this loop. #each will
+    # keep iterating over the child elements and won't allow us to stop
+    # at each level and capture information while we traverse the tree.
+    elems_in_level.times do
+      # Pull first element in queue
+      current_node = queue.shift
+      level_sum += current_node.val
+
+      # Check for node's children, if exist, add to queue
+      queue << current_node.left if current_node.left != nil
+      queue << current_node.right if current_node.right != nil
+    end
+    avg_per_level << counter/num_of_elems.to_f
+  end
+  avg_per_level
+end
+```
+
 ### Lists
 
 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.

@@ -102,7 +102,7 @@
 // on elements of a post
 @media (min-width: variables.$breakpoint-md) {
   .post {
-    p, ul, ol, blockquote,.highlighter-rouge {
+    p, ul, ol, blockquote, table, .highlighter-rouge, figure.highlight  {
       max-width: variables.$max-content-width;
     } 
   }

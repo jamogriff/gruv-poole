@@ -75,7 +75,6 @@ $wcag-code-on-dark: color.scale(#fb4934, $lightness: 8%);
   --quote-color: var(--blue-dark);
   --quote-accent: var(--blue);
   --code-color: var(--red-dark);
-  --code-color-wcag: var(--red-dark);
 }
 
 /* Dark theme specific contrast and colors */
@@ -94,7 +93,6 @@ $wcag-code-on-dark: color.scale(#fb4934, $lightness: 8%);
     --alert: var(--yellow);
     --quote-color: var(--blue-light);
     --quote-accent: var(--blue);
-    --code-color: var(--red-light);
-    --code-color-wcag: #{$wcag-code-on-dark};
+    --code-color: #{$wcag-code-on-dark};
   }
 }
