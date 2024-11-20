@@ -48,7 +48,7 @@ In your Jekyll site's code, add the following to your Gemfile:
 
 Add the following line to your site's `_config.yml`:
 ```yaml
-theme: gruv-poole
+theme: jekyll-theme-gruv-poole
 ```
 
 Ensure that you have your `_config.yml` with the data necessary to build the theme (see [Configuration Options](#configuration-options)) and then run `bundle` and `jekyll s`.
