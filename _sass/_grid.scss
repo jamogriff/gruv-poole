@@ -1,0 +1,28 @@
+@use 'variables';
+@use 'mixins' as *;
+
+/*
+ * Simple responsive grids for
+ * side-by-side content
+ */
+.row-md-1-1, .row-md-1-2, .row-md-2-1 {
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: variables.$breakpoint-md) {
+  .row-md-1-1 {
+    @include grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .row-md-1-2 {
+    @include grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .row-md-2-1 {
+    @include grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}

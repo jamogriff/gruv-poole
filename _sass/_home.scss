@@ -59,9 +59,8 @@ section {
 
 @media (min-width: variables.$breakpoint-md) {
     .home {
-        display: grid;
+        @include grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1.75rem
     }
 
     .archive {

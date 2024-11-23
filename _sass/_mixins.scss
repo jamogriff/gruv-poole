@@ -23,3 +23,8 @@
   overflow: auto;
   scrollbar-color: var(--scrollbar-color);
 }
+
+@mixin grid {
+  display: grid;
+  grid-gap: 1.75rem;
+}
