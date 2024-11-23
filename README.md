@@ -74,6 +74,8 @@ All of the site's styling resides in the `_sass` directory. The most noteworthy 
 
 The theme's main style file that ultimately gets imported to the site's base HTML layout is `/assets/main.scss`. This `main.scss` file imports all of the Sass files in the `_sass` directory and Jekyll's Sass compilation outputs a single `main.css` similar to Webpack.
 
+**Want to add your own styles?** Create a file entitled `_sass/_custom.scss` and add them there.
+
 ## Configuration Options
 
 All the options and content in this section are configured in your site's `_config.yml` file. Note that [YAML](https://yaml.org/) syntax is very specific about spacing.
