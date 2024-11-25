@@ -74,6 +74,17 @@ All of the site's styling resides in the `_sass` directory. The most noteworthy 
 
 The theme's main style file that ultimately gets imported to the site's base HTML layout is `/assets/main.scss`. This `main.scss` file imports all of the Sass files in the `_sass` directory and Jekyll's Sass compilation outputs a single `main.css` similar to Webpack.
 
+#### Highlights
+
+Some highlights include [Bootstrap-inspired](https://getbootstrap.com/docs/5.3/utilities/spacing/) spacing utility classes:
+```
+m-x, mt-x, mb-x, p-x, pt-x, pb-x
+```
+As well as a couple of simple responsive grid classes for two column support on desktop:
+```
+.row-md-1-1, .row-md-1-2, .row-md-2-1
+```
+
 **Want to add your own styles?** Create a file entitled `_sass/_custom.scss` and add them there.
 
 ## Configuration Options

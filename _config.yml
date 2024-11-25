@@ -29,7 +29,7 @@ about:
 # Add any pages that you want to be
 # included in the masthead's navbar
 masthead_pages:
-  - about.md
+  - about.html
 
 # Replace with your own ID
 # if you want Google Analytics

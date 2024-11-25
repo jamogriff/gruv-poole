@@ -1,0 +1,26 @@
+@use 'sass:list';
+
+@mixin generateUtilityClasses($prefix, $property) {
+  $scales: [0, .25, .5, 1, 1.5, 3];
+
+  @for $i from 1 through list.length($scales) {
+    // scale of current index
+    $scale: list.nth($scales, $i);
+    $space: var(--spacer);
+
+    // create property
+    .#{$prefix}-#{$i - 1} {
+      #{$property}: calc(var(--spacer) * $scale);
+    }
+  }
+}
+
+// Margin utilities (ex: m-0, mt-1, mb-5)
+@include generateUtilityClasses(m, margin);
+@include generateUtilityClasses(mt, margin-top);
+@include generateUtilityClasses(mb, margin-bottom);
+
+// Padding utilities (ex: p-0, pt-1, pb-5)
+@include generateUtilityClasses(p, padding);
+@include generateUtilityClasses(pt, padding-top);
+@include generateUtilityClasses(pb, padding-bottom);
