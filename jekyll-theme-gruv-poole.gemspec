@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-gruv-poole"
-  spec.version       = "1.0.3"
+  spec.version       = "1.1.0"
   spec.authors       = ["Jamison Griffith"]
   spec.email         = ["jamison.griffith@gmail.com"]
 
